@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ophyd_async.epics.signal.signal &#8212; ophyd-async 0.1.dev499+g4f58a41 documentation</title>
+    <title>ophyd_async.epics.signal.signal &#8212; ophyd-async 0.1.dev503+g610d2d1 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../../../_static/documentation_options.js?v=daf019de"></script>
+    <script src="../../../../_static/documentation_options.js?v=2e760b50"></script>
     <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -577,7 +577,7 @@ document.write(`
 <div class="viewcode-block" id="epics_signal_rw">
 <a class="viewcode-back" href="../../../../generated/ophyd_async.epics.signal.epics_signal_rw.html#ophyd_async.epics.signal.epics_signal_rw">[docs]</a>
 <span class="k">def</span> <span class="nf">epics_signal_rw</span><span class="p">(</span>
-    <span class="n">datatype</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">read_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">write_pv</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">datatype</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">read_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">write_pv</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalRW</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a `SignalRW` backed by 1 or 2 EPICS PVs</span>
 
@@ -591,14 +591,12 @@ document.write(`
 <span class="sd">        If given, use this PV to write to, otherwise use read_pv</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">backend</span> <span class="o">=</span> <span class="n">_make_backend</span><span class="p">(</span><span class="n">datatype</span><span class="p">,</span> <span class="n">read_pv</span><span class="p">,</span> <span class="n">write_pv</span> <span class="ow">or</span> <span class="n">read_pv</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">SignalRW</span><span class="p">(</span><span class="n">backend</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">SignalRW</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span></div>
 
 
 
 <span class="k">def</span> <span class="nf">epics_signal_rw_rbv</span><span class="p">(</span>
-    <span class="n">datatype</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span>
-    <span class="n">write_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-    <span class="n">read_suffix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;_RBV&quot;</span><span class="p">,</span>
+    <span class="n">datatype</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">write_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">read_suffix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;_RBV&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalRW</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a `SignalRW` backed by 1 or 2 EPICS PVs, with a suffix on the readback pv</span>
 
@@ -611,29 +609,29 @@ document.write(`
 <span class="sd">    read_suffix:</span>
 <span class="sd">        Append this suffix to the write pv to create the readback pv</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">epics_signal_rw</span><span class="p">(</span><span class="n">datatype</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">write_pv</span><span class="si">}{</span><span class="n">read_suffix</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">write_pv</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">epics_signal_rw</span><span class="p">(</span><span class="n">datatype</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">write_pv</span><span class="si">}{</span><span class="n">read_suffix</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">write_pv</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="epics_signal_r">
 <a class="viewcode-back" href="../../../../generated/ophyd_async.epics.signal.epics_signal_r.html#ophyd_async.epics.signal.epics_signal_r">[docs]</a>
-<span class="k">def</span> <span class="nf">epics_signal_r</span><span class="p">(</span><span class="n">datatype</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">read_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalR</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">epics_signal_r</span><span class="p">(</span><span class="n">datatype</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">read_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalR</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a `SignalR` backed by 1 EPICS PV</span>
 
 <span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    datatype:</span>
+<span class="sd">    ---------</span>
+<span class="sd">    datatype</span>
 <span class="sd">        Check that the PV is of this type</span>
 <span class="sd">    read_pv:</span>
 <span class="sd">        The PV to read and monitor</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">backend</span> <span class="o">=</span> <span class="n">_make_backend</span><span class="p">(</span><span class="n">datatype</span><span class="p">,</span> <span class="n">read_pv</span><span class="p">,</span> <span class="n">read_pv</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">SignalR</span><span class="p">(</span><span class="n">backend</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">SignalR</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span></div>
 
 
 
 <div class="viewcode-block" id="epics_signal_w">
 <a class="viewcode-back" href="../../../../generated/ophyd_async.epics.signal.epics_signal_w.html#ophyd_async.epics.signal.epics_signal_w">[docs]</a>
-<span class="k">def</span> <span class="nf">epics_signal_w</span><span class="p">(</span><span class="n">datatype</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">write_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalW</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
+<span class="k">def</span> <span class="nf">epics_signal_w</span><span class="p">(</span><span class="n">datatype</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">write_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalW</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a `SignalW` backed by 1 EPICS PVs</span>
 
 <span class="sd">    Parameters</span>
@@ -644,13 +642,13 @@ document.write(`
 <span class="sd">        The PV to write to</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">backend</span> <span class="o">=</span> <span class="n">_make_backend</span><span class="p">(</span><span class="n">datatype</span><span class="p">,</span> <span class="n">write_pv</span><span class="p">,</span> <span class="n">write_pv</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">SignalW</span><span class="p">(</span><span class="n">backend</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">SignalW</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span></div>
 
 
 
 <div class="viewcode-block" id="epics_signal_x">
 <a class="viewcode-back" href="../../../../generated/ophyd_async.epics.signal.epics_signal_x.html#ophyd_async.epics.signal.epics_signal_x">[docs]</a>
-<span class="k">def</span> <span class="nf">epics_signal_x</span><span class="p">(</span><span class="n">write_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalX</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">epics_signal_x</span><span class="p">(</span><span class="n">write_pv</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SignalX</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a `SignalX` backed by 1 EPICS PVs</span>
 
 <span class="sd">    Parameters</span>
@@ -659,7 +657,7 @@ document.write(`
 <span class="sd">        The PV to write its initial value to on trigger</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">backend</span><span class="p">:</span> <span class="n">SignalBackend</span> <span class="o">=</span> <span class="n">_make_backend</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">write_pv</span><span class="p">,</span> <span class="n">write_pv</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">SignalX</span><span class="p">(</span><span class="n">backend</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">SignalX</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span></div>
 
 </pre></div>
 

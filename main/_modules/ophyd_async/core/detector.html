@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ophyd_async.core.detector &#8212; ophyd-async 0.1.dev499+g4f58a41 documentation</title>
+    <title>ophyd_async.core.detector &#8212; ophyd-async 0.1.dev503+g610d2d1 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../../_static/documentation_options.js?v=daf019de"></script>
+    <script src="../../../_static/documentation_options.js?v=2e760b50"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -553,17 +553,17 @@ document.write(`
 
 <span class="kn">from</span> <span class="nn">bluesky.protocols</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">Collectable</span><span class="p">,</span>
-    <span class="n">Configurable</span><span class="p">,</span>
     <span class="n">Descriptor</span><span class="p">,</span>
     <span class="n">Flyable</span><span class="p">,</span>
     <span class="n">Preparable</span><span class="p">,</span>
-    <span class="n">Readable</span><span class="p">,</span>
     <span class="n">Reading</span><span class="p">,</span>
     <span class="n">Stageable</span><span class="p">,</span>
     <span class="n">StreamAsset</span><span class="p">,</span>
     <span class="n">Triggerable</span><span class="p">,</span>
     <span class="n">WritesStreamAssets</span><span class="p">,</span>
 <span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">ophyd_async.protocols</span> <span class="kn">import</span> <span class="n">AsyncConfigurable</span><span class="p">,</span> <span class="n">AsyncReadable</span>
 
 <span class="kn">from</span> <span class="nn">.async_status</span> <span class="kn">import</span> <span class="n">AsyncStatus</span>
 <span class="kn">from</span> <span class="nn">.device</span> <span class="kn">import</span> <span class="n">Device</span>
@@ -715,8 +715,8 @@ document.write(`
 <span class="k">class</span> <span class="nc">StandardDetector</span><span class="p">(</span>
     <span class="n">Device</span><span class="p">,</span>
     <span class="n">Stageable</span><span class="p">,</span>
-    <span class="n">Configurable</span><span class="p">,</span>
-    <span class="n">Readable</span><span class="p">,</span>
+    <span class="n">AsyncConfigurable</span><span class="p">,</span>
+    <span class="n">AsyncReadable</span><span class="p">,</span>
     <span class="n">Triggerable</span><span class="p">,</span>
     <span class="n">Preparable</span><span class="p">,</span>
     <span class="n">Flyable</span><span class="p">,</span>
@@ -830,7 +830,7 @@ document.write(`
 
 <div class="viewcode-block" id="StandardDetector.describe">
 <a class="viewcode-back" href="../../../generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.describe">[docs]</a>
-    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Descriptor</span><span class="p">]:</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Descriptor</span><span class="p">]:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_describe</span></div>
 
 
