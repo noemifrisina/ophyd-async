@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ophyd_async.core.signal_backend &#8212; ophyd-async 0.1.dev498+gf294582 documentation</title>
+    <title>ophyd_async.core.signal_backend &#8212; ophyd-async 0.1.dev499+g4f58a41 documentation</title>
   
   
   
@@ -38,7 +38,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../../_static/documentation_options.js?v=67d3e682"></script>
+    <script src="../../../_static/documentation_options.js?v=daf019de"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -549,7 +549,13 @@ document.write(`
     <span class="n">datatype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">T</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="c1">#: Like ca://PV_PREFIX:SIGNAL</span>
-    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<div class="viewcode-block" id="SignalBackend.source">
+<a class="viewcode-back" href="../../../generated/ophyd_async.core.SignalBackend.html#ophyd_async.core.SignalBackend.source">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return source of signal. Signals may pass a name to the backend, which can be</span>
+<span class="sd">        used or discarded.&quot;&quot;&quot;</span></div>
+
 
 <div class="viewcode-block" id="SignalBackend.connect">
 <a class="viewcode-back" href="../../../generated/ophyd_async.core.SignalBackend.html#ophyd_async.core.SignalBackend.connect">[docs]</a>
@@ -568,7 +574,7 @@ document.write(`
 <div class="viewcode-block" id="SignalBackend.get_descriptor">
 <a class="viewcode-back" href="../../../generated/ophyd_async.core.SignalBackend.html#ophyd_async.core.SignalBackend.get_descriptor">[docs]</a>
     <span class="nd">@abstractmethod</span>
-    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Descriptor</span><span class="p">:</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_descriptor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Descriptor</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Metadata like source, dtype, shape, precision, units&quot;&quot;&quot;</span></div>
 
 

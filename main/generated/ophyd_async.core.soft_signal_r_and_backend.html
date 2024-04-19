@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ophyd_async.epics &#8212; ophyd-async 0.1.dev499+g4f58a41 documentation</title>
+    <title>ophyd_async.core.soft_signal_r_and_backend &#8212; ophyd-async 0.1.dev499+g4f58a41 documentation</title>
   
   
   
@@ -45,7 +45,7 @@
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=30646c52"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'generated/ophyd_async.epics';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generated/ophyd_async.core.soft_signal_r_and_backend';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://bluesky.github.io/ophyd-async/switcher.json';
@@ -55,8 +55,8 @@
     <link rel="icon" href="../_static/ophyd_favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ophyd_async.epics.areadetector" href="ophyd_async.epics.areadetector.html" />
-    <link rel="prev" title="ophyd_async.core.NotConnected" href="ophyd_async.core.NotConnected.html" />
+    <link rel="next" title="ophyd_async.core.soft_signal_rw" href="ophyd_async.core.soft_signal_rw.html" />
+    <link rel="prev" title="ophyd_async.core" href="ophyd_async.core.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -491,8 +491,8 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../reference/api.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="ophyd_async.core.html">ophyd_async.core</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="ophyd_async.core.soft_signal_r_and_backend.html">ophyd_async.core.soft_signal_r_and_backend</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="ophyd_async.core.html">ophyd_async.core</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">ophyd_async.core.soft_signal_r_and_backend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ophyd_async.core.soft_signal_rw.html">ophyd_async.core.soft_signal_rw</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ophyd_async.core.observe_value.html">ophyd_async.core.observe_value</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ophyd_async.core.set_and_wait_for_value.html">ophyd_async.core.set_and_wait_for_value</a></li>
@@ -538,7 +538,7 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="ophyd_async.core.NotConnected.html">ophyd_async.core.NotConnected</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">ophyd_async.epics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="ophyd_async.epics.html">ophyd_async.epics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="ophyd_async.epics.areadetector.html">ophyd_async.epics.areadetector</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="ophyd_async.epics.areadetector.ad_r.html">ophyd_async.epics.areadetector.ad_r</a></li>
 <li class="toctree-l4"><a class="reference internal" href="ophyd_async.epics.areadetector.ad_rw.html">ophyd_async.epics.areadetector.ad_rw</a></li>
@@ -628,6 +628,8 @@ document.write(`
 
 
 
+
+
 <nav aria-label="Breadcrumb">
   <ul class="bd-breadcrumbs">
     
@@ -640,9 +642,12 @@ document.write(`
     <li class="breadcrumb-item"><a href="../reference.html" class="nav-link">Reference</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../reference/api.html" class="nav-link">API</a></li>
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
     
-    <li class="breadcrumb-item active" aria-current="page">ophyd_async.epics</li>
+    
+    <li class="breadcrumb-item"><a href="ophyd_async.core.html" class="nav-link">ophyd_async.core</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">ophyd_async....</li>
   </ul>
 </nav>
 </div>
@@ -659,32 +664,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ophyd async is included on a provisional basis until the v1.0 release and
-may change API on minor release numbers before then</p>
-</div>
-<section id="module-ophyd_async.epics">
-<span id="ophyd-async-epics"></span><h1>ophyd_async.epics<a class="headerlink" href="#module-ophyd_async.epics" title="Link to this heading">#</a></h1>
-<table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="ophyd_async.epics.areadetector.html#module-ophyd_async.epics.areadetector" title="ophyd_async.epics.areadetector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ophyd_async.epics.areadetector</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ophyd_async.epics.demo.html#module-ophyd_async.epics.demo" title="ophyd_async.epics.demo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ophyd_async.epics.demo</span></code></a></p></td>
-<td><p>Demo EPICS Devices for the tutorial</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ophyd_async.epics.motion.html#module-ophyd_async.epics.motion" title="ophyd_async.epics.motion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ophyd_async.epics.motion</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="ophyd_async.epics.pvi.html#module-ophyd_async.epics.pvi" title="ophyd_async.epics.pvi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ophyd_async.epics.pvi</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="ophyd_async.epics.signal.html#module-ophyd_async.epics.signal" title="ophyd_async.epics.signal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ophyd_async.epics.signal</span></code></a></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
+  <section id="ophyd-async-core-soft-signal-r-and-backend">
+<h1>ophyd_async.core.soft_signal_r_and_backend<a class="headerlink" href="#ophyd-async-core-soft-signal-r-and-backend" title="Link to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ophyd_async.core.soft_signal_r_and_backend">
+<span class="sig-prename descclassname"><span class="pre">ophyd_async.core.</span></span><span class="sig-name descname"><span class="pre">soft_signal_r_and_backend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datatype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.12)"><span class="pre">Type</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.12)"><span class="pre">Tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="ophyd_async.core.SignalR.html#ophyd_async.core.SignalR" title="ophyd_async.core.signal.SignalR"><span class="pre">SignalR</span></a><span class="p"><span class="pre">[</span></span><span class="pre">T</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="ophyd_async.core.SimSignalBackend.html#ophyd_async.core.SimSignalBackend" title="ophyd_async.core.sim_signal_backend.SimSignalBackend"><span class="pre">SimSignalBackend</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/ophyd_async/core/signal.html#soft_signal_r_and_backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ophyd_async.core.soft_signal_r_and_backend" title="Link to this definition">#</a></dt>
+<dd><p>Returns a tuple of a read-only Signal and its SimSignalBackend through
+which the signal can be internally modified within the device. Use
+soft_signal_rw if you want a device that is externally modifiable</p>
+</dd></dl>
+
 </section>
 
 
@@ -698,20 +687,20 @@ may change API on minor release numbers before then</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ophyd_async.core.NotConnected.html"
+       href="ophyd_async.core.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ophyd_async.core.NotConnected</p>
+        <p class="prev-next-title">ophyd_async.core</p>
       </div>
     </a>
     <a class="right-next"
-       href="ophyd_async.epics.areadetector.html"
+       href="ophyd_async.core.soft_signal_rw.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ophyd_async.epics.areadetector</p>
+        <p class="prev-next-title">ophyd_async.core.soft_signal_rw</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -726,10 +715,22 @@ may change API on minor release numbers before then</p>
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ophyd_async.core.soft_signal_r_and_backend"><code class="docutils literal notranslate"><span class="pre">soft_signal_r_and_backend()</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/bluesky/ophyd-async/edit/main/docs/generated/ophyd_async.epics.rst">
+    <a href="https://github.com/bluesky/ophyd-async/edit/main/docs/generated/ophyd_async.core.soft_signal_r_and_backend.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -744,7 +745,7 @@ may change API on minor release numbers before then</p>
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/generated/ophyd_async.epics.rst.txt">
+    <a href="../_sources/generated/ophyd_async.core.soft_signal_r_and_backend.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

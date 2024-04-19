@@ -29,6 +29,7 @@ ophyd\_async.core.SignalBackend
       ~SignalBackend.get_value
       ~SignalBackend.put
       ~SignalBackend.set_callback
+      ~SignalBackend.source
    
    
 
@@ -39,6 +40,5 @@ ophyd\_async.core.SignalBackend
    .. autosummary::
    
       ~SignalBackend.datatype
-      ~SignalBackend.source
    
    
