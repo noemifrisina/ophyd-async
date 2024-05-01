@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ophyd_async.core.signal &#8212; ophyd-async 0.1.dev503+g610d2d1 documentation</title>
+    <title>ophyd_async.core.signal &#8212; ophyd-async 0.1.dev515+gf1ec405 documentation</title>
   
   
   
@@ -38,16 +38,18 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../../_static/documentation_options.js?v=2e760b50"></script>
+    <script src="../../../_static/documentation_options.js?v=8f16a9af"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=30646c52"></script>
     <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/ophyd_async/core/signal';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://bluesky.github.io/ophyd-async/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://blueskyproject.io/ophyd-async/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
@@ -182,21 +184,6 @@
                   </a>
                 </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-                <li class="nav-item">
-                  <a class="nav-link dropdown-item nav-external" href="https://github.com/bluesky/ophyd-async/releases">
-                    Release Notes
-                  </a>
-                </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -257,18 +244,6 @@ document.write(`
           
           <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">PyPI</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://gitter.im/NSLS-II/DAMA" title="Gitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-person-circle-question fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Gitter</span></a>
         </li>
 </ul></div>
       
@@ -375,21 +350,6 @@ document.write(`
                   </a>
                 </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
-                    More
-                </button>
-                <ul id="pst-nav-more-links-2" class="dropdown-menu">
-                    
-                <li class="nav-item">
-                  <a class="nav-link dropdown-item nav-external" href="https://github.com/bluesky/ophyd-async/releases">
-                    Release Notes
-                  </a>
-                </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
         
@@ -436,18 +396,6 @@ document.write(`
           
           <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">PyPI</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://gitter.im/NSLS-II/DAMA" title="Gitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-person-circle-question fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Gitter</span></a>
         </li>
 </ul></div>
         
@@ -536,7 +484,18 @@ document.write(`
 
 <span class="kn">import</span> <span class="nn">asyncio</span>
 <span class="kn">import</span> <span class="nn">functools</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">AsyncGenerator</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">AsyncGenerator</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">Generic</span><span class="p">,</span>
+    <span class="n">Mapping</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">Type</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="kn">from</span> <span class="nn">bluesky.protocols</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">Descriptor</span><span class="p">,</span>
@@ -544,11 +503,10 @@ document.write(`
     <span class="n">Location</span><span class="p">,</span>
     <span class="n">Movable</span><span class="p">,</span>
     <span class="n">Reading</span><span class="p">,</span>
-    <span class="n">Stageable</span><span class="p">,</span>
     <span class="n">Subscribable</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="kn">from</span> <span class="nn">ophyd_async.protocols</span> <span class="kn">import</span> <span class="n">AsyncReadable</span>
+<span class="kn">from</span> <span class="nn">ophyd_async.protocols</span> <span class="kn">import</span> <span class="n">AsyncConfigurable</span><span class="p">,</span> <span class="n">AsyncReadable</span><span class="p">,</span> <span class="n">AsyncStageable</span>
 
 <span class="kn">from</span> <span class="nn">.async_status</span> <span class="kn">import</span> <span class="n">AsyncStatus</span>
 <span class="kn">from</span> <span class="nn">.device</span> <span class="kn">import</span> <span class="n">Device</span>
@@ -670,7 +628,7 @@ document.write(`
 
 <div class="viewcode-block" id="SignalR">
 <a class="viewcode-back" href="../../../generated/ophyd_async.core.SignalR.html#ophyd_async.core.SignalR">[docs]</a>
-<span class="k">class</span> <span class="nc">SignalR</span><span class="p">(</span><span class="n">Signal</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">AsyncReadable</span><span class="p">,</span> <span class="n">Stageable</span><span class="p">,</span> <span class="n">Subscribable</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">SignalR</span><span class="p">(</span><span class="n">Signal</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">AsyncReadable</span><span class="p">,</span> <span class="n">AsyncStageable</span><span class="p">,</span> <span class="n">Subscribable</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Signal that can be read from and monitored&quot;&quot;&quot;</span>
 
     <span class="n">_cache</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">_SignalCache</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -869,6 +827,103 @@ document.write(`
     <span class="n">backend</span> <span class="o">=</span> <span class="n">SimSignalBackend</span><span class="p">(</span><span class="n">datatype</span><span class="p">,</span> <span class="n">initial_value</span><span class="p">)</span>
     <span class="n">signal</span> <span class="o">=</span> <span class="n">SignalR</span><span class="p">(</span><span class="n">backend</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="assert_value">
+<a class="viewcode-back" href="../../../generated/ophyd_async.core.assert_value.html#ophyd_async.core.assert_value">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">assert_value</span><span class="p">(</span><span class="n">signal</span><span class="p">:</span> <span class="n">SignalR</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Assert a signal&#39;s value and compare it an expected signal.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    signal:</span>
+<span class="sd">        signal with get_value.</span>
+<span class="sd">    value:</span>
+<span class="sd">        The expected value from the signal.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Example usage::</span>
+<span class="sd">        await assert_value(signal, value)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="k">await</span> <span class="n">signal</span><span class="o">.</span><span class="n">get_value</span><span class="p">()</span> <span class="o">==</span> <span class="n">value</span></div>
+
+
+
+<div class="viewcode-block" id="assert_reading">
+<a class="viewcode-back" href="../../../generated/ophyd_async.core.assert_reading.html#ophyd_async.core.assert_reading">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">assert_reading</span><span class="p">(</span>
+    <span class="n">readable</span><span class="p">:</span> <span class="n">AsyncReadable</span><span class="p">,</span> <span class="n">reading</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Reading</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Assert readings from readable.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    readable:</span>
+<span class="sd">        Callable with readable.read function that generate readings.</span>
+
+<span class="sd">    reading:</span>
+<span class="sd">        The expected readings from the readable.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Example usage::</span>
+<span class="sd">        await assert_reading(readable, reading)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="k">await</span> <span class="n">readable</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="o">==</span> <span class="n">reading</span></div>
+
+
+
+<div class="viewcode-block" id="assert_configuration">
+<a class="viewcode-back" href="../../../generated/ophyd_async.core.assert_configuration.html#ophyd_async.core.assert_configuration">[docs]</a>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">assert_configuration</span><span class="p">(</span>
+    <span class="n">configurable</span><span class="p">:</span> <span class="n">AsyncConfigurable</span><span class="p">,</span>
+    <span class="n">configuration</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Reading</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Assert readings from Configurable.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    configurable:</span>
+<span class="sd">        Configurable with Configurable.read function that generate readings.</span>
+
+<span class="sd">    configuration:</span>
+<span class="sd">        The expected readings from configurable.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Example usage::</span>
+<span class="sd">        await assert_configuration(configurable configuration)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="k">await</span> <span class="n">configurable</span><span class="o">.</span><span class="n">read_configuration</span><span class="p">()</span> <span class="o">==</span> <span class="n">configuration</span></div>
+
+
+
+<div class="viewcode-block" id="assert_emitted">
+<a class="viewcode-back" href="../../../generated/ophyd_async.core.assert_emitted.html#ophyd_async.core.assert_emitted">[docs]</a>
+<span class="k">def</span> <span class="nf">assert_emitted</span><span class="p">(</span><span class="n">docs</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">]],</span> <span class="o">**</span><span class="n">numbers</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Assert emitted document generated by running a Bluesky plan</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Doc:</span>
+<span class="sd">        A dictionary</span>
+
+<span class="sd">    numbers:</span>
+<span class="sd">        expected emission in kwarg from</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Example usage::</span>
+<span class="sd">        assert_emitted(docs, start=1, descriptor=1,</span>
+<span class="sd">        resource=1, datum=1, event=1, stop=1)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">list</span><span class="p">(</span><span class="n">docs</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">docs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span> <span class="o">==</span> <span class="n">numbers</span></div>
 
 
 

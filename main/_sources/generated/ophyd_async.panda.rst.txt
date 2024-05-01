@@ -35,7 +35,8 @@ ophyd\_async.panda
       :template: custom-class-template.rst
       :nosignatures:
    
-      PandA
+      CommonPandaBlocks
+      HDFPanda
       PcapBlock
       PulseBlock
       SeqBlock
@@ -45,7 +46,6 @@ ophyd\_async.panda
       PandaPcapController
       TimeUnits
       DataBlock
-      CommonPandABlocks
    
    
 

@@ -34,6 +34,9 @@ ophyd\_async.epics.areadetector
       :template: custom-class-template.rst
       :nosignatures:
    
+      AravisDetector
+      KinetixDetector
+      VimbaDetector
       SingleTriggerDet
       FileWriteMode
       ImageMode

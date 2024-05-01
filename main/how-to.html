@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>How-to Guides &#8212; ophyd-async 0.1.dev503+g610d2d1 documentation</title>
+    <title>How-to Guides &#8212; ophyd-async 0.1.dev515+gf1ec405 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=2e760b50"></script>
+    <script src="_static/documentation_options.js?v=8f16a9af"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -48,14 +48,14 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'how-to';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://bluesky.github.io/ophyd-async/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://blueskyproject.io/ophyd-async/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
     <link rel="icon" href="_static/ophyd_favicon.svg"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Compound Devices Together" href="how-to/compound-devices.html" />
+    <link rel="next" title="Decision Flowchart for Creating a New ophyd_async Device" href="how-to/choose-interfaces-for-devices.html" />
     <link rel="prev" title="Using existing Devices" href="tutorials/using-existing-devices.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -185,21 +185,6 @@
                   </a>
                 </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-                <li class="nav-item">
-                  <a class="nav-link dropdown-item nav-external" href="https://github.com/bluesky/ophyd-async/releases">
-                    Release Notes
-                  </a>
-                </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -260,18 +245,6 @@ document.write(`
           
           <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">PyPI</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://gitter.im/NSLS-II/DAMA" title="Gitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-person-circle-question fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Gitter</span></a>
         </li>
 </ul></div>
       
@@ -380,21 +353,6 @@ document.write(`
                   </a>
                 </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
-                    More
-                </button>
-                <ul id="pst-nav-more-links-2" class="dropdown-menu">
-                    
-                <li class="nav-item">
-                  <a class="nav-link dropdown-item nav-external" href="https://github.com/bluesky/ophyd-async/releases">
-                    Release Notes
-                  </a>
-                </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
         
@@ -442,18 +400,6 @@ document.write(`
           <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">PyPI</span></a>
         </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://gitter.im/NSLS-II/DAMA" title="Gitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-person-circle-question fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Gitter</span></a>
-        </li>
 </ul></div>
         
           <div class="navbar-item">
@@ -490,6 +436,7 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="how-to/choose-interfaces-for-devices.html">Decision Flowchart for Creating a New ophyd_async Device</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to/compound-devices.html">Compound Devices Together</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to/contribute.html">Contribute to the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to/make-a-simple-device.html">Make a Simple Device</a></li>
@@ -553,6 +500,7 @@ document.write(`
 <p>Practical step-by-step guides for the more experienced user.</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="how-to/choose-interfaces-for-devices.html">Decision Flowchart for Creating a New ophyd_async Device</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to/compound-devices.html">Compound Devices Together</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to/contribute.html">Contribute to the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to/make-a-simple-device.html">Make a Simple Device</a></li>
@@ -581,11 +529,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="how-to/compound-devices.html"
+       href="how-to/choose-interfaces-for-devices.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Compound Devices Together</p>
+        <p class="prev-next-title">Decision Flowchart for Creating a New ophyd_async Device</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

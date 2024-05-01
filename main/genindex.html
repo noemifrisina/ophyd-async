@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; ophyd-async 0.1.dev503+g610d2d1 documentation</title>
+    <title>Index &#8212; ophyd-async 0.1.dev515+gf1ec405 documentation</title>
   
   
   
@@ -38,16 +38,18 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=2e760b50"></script>
+    <script src="_static/documentation_options.js?v=8f16a9af"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=30646c52"></script>
     <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://bluesky.github.io/ophyd-async/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://blueskyproject.io/ophyd-async/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
@@ -182,21 +184,6 @@
                   </a>
                 </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-                <li class="nav-item">
-                  <a class="nav-link dropdown-item nav-external" href="https://github.com/bluesky/ophyd-async/releases">
-                    Release Notes
-                  </a>
-                </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -257,18 +244,6 @@ document.write(`
           
           <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">PyPI</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://gitter.im/NSLS-II/DAMA" title="Gitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-person-circle-question fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Gitter</span></a>
         </li>
 </ul></div>
       
@@ -373,21 +348,6 @@ document.write(`
                   </a>
                 </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
-                    More
-                </button>
-                <ul id="pst-nav-more-links-2" class="dropdown-menu">
-                    
-                <li class="nav-item">
-                  <a class="nav-link dropdown-item nav-external" href="https://github.com/bluesky/ophyd-async/releases">
-                    Release Notes
-                  </a>
-                </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
         
@@ -434,18 +394,6 @@ document.write(`
           
           <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">PyPI</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://gitter.im/NSLS-II/DAMA" title="Gitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-person-circle-question fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Gitter</span></a>
         </li>
 </ul></div>
         
@@ -504,6 +452,10 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.walk_rw_signals.html">ophyd_async.core.walk_rw_signals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.load_device.html">ophyd_async.core.load_device</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.save_device.html">ophyd_async.core.save_device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.assert_reading.html">ophyd_async.core.assert_reading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.assert_value.html">ophyd_async.core.assert_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.assert_configuration.html">ophyd_async.core.assert_configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.assert_emitted.html">ophyd_async.core.assert_emitted</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.SignalBackend.html">ophyd_async.core.SignalBackend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.SimSignalBackend.html">ophyd_async.core.SimSignalBackend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.DetectorControl.html">ophyd_async.core.DetectorControl</a></li>
@@ -525,6 +477,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.ShapeProvider.html">ophyd_async.core.ShapeProvider</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.StaticDirectoryProvider.html">ophyd_async.core.StaticDirectoryProvider</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.StandardReadable.html">ophyd_async.core.StandardReadable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.ConfigSignal.html">ophyd_async.core.ConfigSignal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.HintedSignal.html">ophyd_async.core.HintedSignal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.TriggerInfo.html">ophyd_async.core.TriggerInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.TriggerLogic.html">ophyd_async.core.TriggerLogic</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.core.HardwareTriggeredFlyable.html">ophyd_async.core.HardwareTriggeredFlyable</a></li>
@@ -535,6 +489,9 @@ document.write(`
 <li class="toctree-l3 has-children"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.html">ophyd_async.epics.areadetector</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.ad_r.html">ophyd_async.epics.areadetector.ad_r</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.ad_rw.html">ophyd_async.epics.areadetector.ad_rw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.AravisDetector.html">ophyd_async.epics.areadetector.AravisDetector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.KinetixDetector.html">ophyd_async.epics.areadetector.KinetixDetector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.VimbaDetector.html">ophyd_async.epics.areadetector.VimbaDetector</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html">ophyd_async.epics.areadetector.SingleTriggerDet</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.FileWriteMode.html">ophyd_async.epics.areadetector.FileWriteMode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.areadetector.ImageMode.html">ophyd_async.epics.areadetector.ImageMode</a></li>
@@ -559,6 +516,7 @@ document.write(`
 </li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="generated/ophyd_async.epics.pvi.html">ophyd_async.epics.pvi</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.pvi.fill_pvi_entries.html">ophyd_async.epics.pvi.fill_pvi_entries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.pvi.create_children_from_annotations.html">ophyd_async.epics.pvi.create_children_from_annotations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/ophyd_async.epics.pvi.PVIEntry.html">ophyd_async.epics.pvi.PVIEntry</a></li>
 </ul>
 </li>
@@ -575,7 +533,8 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.seq_table_from_arrays.html">ophyd_async.panda.seq_table_from_arrays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.seq_table_from_rows.html">ophyd_async.panda.seq_table_from_rows</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.phase_sorter.html">ophyd_async.panda.phase_sorter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.PandA.html">ophyd_async.panda.PandA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.CommonPandaBlocks.html">ophyd_async.panda.CommonPandaBlocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.HDFPanda.html">ophyd_async.panda.HDFPanda</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.PcapBlock.html">ophyd_async.panda.PcapBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.PulseBlock.html">ophyd_async.panda.PulseBlock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.SeqBlock.html">ophyd_async.panda.SeqBlock</a></li>
@@ -585,7 +544,6 @@ document.write(`
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.PandaPcapController.html">ophyd_async.panda.PandaPcapController</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.TimeUnits.html">ophyd_async.panda.TimeUnits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.DataBlock.html">ophyd_async.panda.DataBlock</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generated/ophyd_async.panda.CommonPandABlocks.html">ophyd_async.panda.CommonPandABlocks</a></li>
 </ul>
 </li>
 </ul>
@@ -715,11 +673,41 @@ document.write(`
 </li>
       <li><a href="generated/ophyd_async.core.AsyncStatus.html#ophyd_async.core.AsyncStatus.add_callback">add_callback() (ophyd_async.core.AsyncStatus method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.add_children_as_readables">add_children_as_readables() (ophyd_async.core.StandardReadable method)</a>
+
+      <ul>
+        <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.add_children_as_readables">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.Mover.html#ophyd_async.epics.demo.Mover.add_children_as_readables">(ophyd_async.epics.demo.Mover method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.Sensor.html#ophyd_async.epics.demo.Sensor.add_children_as_readables">(ophyd_async.epics.demo.Sensor method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.SensorGroup.html#ophyd_async.epics.demo.SensorGroup.add_children_as_readables">(ophyd_async.epics.demo.SensorGroup method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.add_children_as_readables">(ophyd_async.epics.motion.Motor method)</a>
+</li>
+      </ul></li>
       <li><a href="generated/ophyd_async.epics.areadetector.NDAttributesXML.html#ophyd_async.epics.areadetector.NDAttributesXML.add_epics_pv">add_epics_pv() (ophyd_async.epics.areadetector.NDAttributesXML method)</a>
 </li>
       <li><a href="generated/ophyd_async.epics.areadetector.NDAttributesXML.html#ophyd_async.epics.areadetector.NDAttributesXML.add_param">add_param() (ophyd_async.epics.areadetector.NDAttributesXML method)</a>
+</li>
+      <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.add_readables">add_readables() (ophyd_async.core.StandardReadable method)</a>
+
+      <ul>
+        <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.add_readables">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.Mover.html#ophyd_async.epics.demo.Mover.add_readables">(ophyd_async.epics.demo.Mover method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.Sensor.html#ophyd_async.epics.demo.Sensor.add_readables">(ophyd_async.epics.demo.Sensor method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.SensorGroup.html#ophyd_async.epics.demo.SensorGroup.add_readables">(ophyd_async.epics.demo.SensorGroup method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.add_readables">(ophyd_async.epics.motion.Motor method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector">AravisDetector (class in ophyd_async.epics.areadetector)</a>
 </li>
       <li><a href="generated/ophyd_async.panda.PcapBlock.html#ophyd_async.panda.PcapBlock.arm">arm (ophyd_async.panda.PcapBlock attribute)</a>
 </li>
@@ -729,6 +717,14 @@ document.write(`
         <li><a href="generated/ophyd_async.panda.PandaPcapController.html#ophyd_async.panda.PandaPcapController.arm">(ophyd_async.panda.PandaPcapController method)</a>
 </li>
       </ul></li>
+      <li><a href="generated/ophyd_async.core.assert_configuration.html#ophyd_async.core.assert_configuration">assert_configuration() (in module ophyd_async.core)</a>
+</li>
+      <li><a href="generated/ophyd_async.core.assert_emitted.html#ophyd_async.core.assert_emitted">assert_emitted() (in module ophyd_async.core)</a>
+</li>
+      <li><a href="generated/ophyd_async.core.assert_reading.html#ophyd_async.core.assert_reading">assert_reading() (in module ophyd_async.core)</a>
+</li>
+      <li><a href="generated/ophyd_async.core.assert_value.html#ophyd_async.core.assert_value">assert_value() (in module ophyd_async.core)</a>
+</li>
       <li><a href="generated/ophyd_async.core.AsyncStatus.html#ophyd_async.core.AsyncStatus">AsyncStatus (class in ophyd_async.core)</a>
 </li>
   </ul></td>
@@ -832,9 +828,15 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.children">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.children">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.children">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.children">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.children">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.children">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.children">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -848,11 +850,11 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.children">(ophyd_async.epics.motion.Motor method)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks.children">(ophyd_async.panda.CommonPandABlocks method)</a>
+        <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.children">(ophyd_async.panda.CommonPandaBlocks method)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.DataBlock.html#ophyd_async.panda.DataBlock.children">(ophyd_async.panda.DataBlock method)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.children">(ophyd_async.panda.PandA method)</a>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.children">(ophyd_async.panda.HDFPanda method)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.PcapBlock.html#ophyd_async.panda.PcapBlock.children">(ophyd_async.panda.PcapBlock method)</a>
 </li>
@@ -873,23 +875,31 @@ document.write(`
         <li><a href="generated/ophyd_async.core.SignalRW.html#ophyd_async.core.SignalRW.clear_sub">(ophyd_async.core.SignalRW method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/ophyd_async.core.DetectorWriter.html#ophyd_async.core.DetectorWriter.close">close() (ophyd_async.core.DetectorWriter method)</a>
 </li>
       <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.collect_asset_docs">collect_asset_docs() (ophyd_async.core.StandardDetector method)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.collect_asset_docs">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.collect_asset_docs">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.collect_asset_docs">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.collect_asset_docs">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.collect_asset_docs">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.collect_asset_docs">(ophyd_async.panda.HDFPanda method)</a>
+</li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/ophyd_async.core.DetectorWriter.html#ophyd_async.core.DetectorWriter.collect_stream_docs">collect_stream_docs() (ophyd_async.core.DetectorWriter method)</a>
 </li>
       <li><a href="generated/ophyd_async.epics.pvi.PVIEntry.html#ophyd_async.epics.pvi.PVIEntry.common_device_type">common_device_type (ophyd_async.epics.pvi.PVIEntry attribute)</a>
 </li>
-      <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks">CommonPandABlocks (class in ophyd_async.panda)</a>
+      <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks">CommonPandaBlocks (class in ophyd_async.panda)</a>
 </li>
       <li><a href="generated/ophyd_async.core.HardwareTriggeredFlyable.html#ophyd_async.core.HardwareTriggeredFlyable.complete">complete() (ophyd_async.core.HardwareTriggeredFlyable method)</a>
 
@@ -898,11 +908,21 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.TriggerLogic.html#ophyd_async.core.TriggerLogic.complete">(ophyd_async.core.TriggerLogic method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.complete">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.complete">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.complete">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.complete">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.complete">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.complete">(ophyd_async.panda.HDFPanda method)</a>
+</li>
       </ul></li>
+      <li><a href="generated/ophyd_async.core.ConfigSignal.html#ophyd_async.core.ConfigSignal">ConfigSignal (class in ophyd_async.core)</a>
+</li>
       <li><a href="generated/ophyd_async.core.Device.html#ophyd_async.core.Device.connect">connect() (ophyd_async.core.Device method)</a>
 
       <ul>
@@ -928,9 +948,15 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.connect">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.connect">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.connect">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.connect">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.connect">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.connect">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.connect">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -944,11 +970,11 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.connect">(ophyd_async.epics.motion.Motor method)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks.connect">(ophyd_async.panda.CommonPandABlocks method)</a>
+        <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.connect">(ophyd_async.panda.CommonPandaBlocks method)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.DataBlock.html#ophyd_async.panda.DataBlock.connect">(ophyd_async.panda.DataBlock method)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.connect">(ophyd_async.panda.PandA method)</a>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.connect">(ophyd_async.panda.HDFPanda method)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.PcapBlock.html#ophyd_async.panda.PcapBlock.connect">(ophyd_async.panda.PcapBlock method)</a>
 </li>
@@ -964,9 +990,17 @@ document.write(`
       <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.controller">controller (ophyd_async.core.StandardDetector property)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.controller">(ophyd_async.epics.areadetector.AravisDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.controller">(ophyd_async.epics.areadetector.KinetixDetector property)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.controller">(ophyd_async.epics.areadetector.PilatusDetector property)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.controller">(ophyd_async.epics.areadetector.VimbaDetector property)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.controller">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.controller">(ophyd_async.panda.HDFPanda property)</a>
 </li>
       </ul></li>
       <li><a href="generated/ophyd_async.core.DeviceVector.html#ophyd_async.core.DeviceVector.copy">copy() (ophyd_async.core.DeviceVector method)</a>
@@ -991,14 +1025,20 @@ document.write(`
         <li><a href="generated/ophyd_async.panda.TimeUnits.html#ophyd_async.panda.TimeUnits.count">(ophyd_async.panda.TimeUnits method)</a>
 </li>
       </ul></li>
+      <li><a href="generated/ophyd_async.epics.pvi.create_children_from_annotations.html#ophyd_async.epics.pvi.create_children_from_annotations">create_children_from_annotations() (in module ophyd_async.epics.pvi)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.data">data (ophyd_async.panda.PandA attribute)</a>
+      <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.data">data (ophyd_async.panda.CommonPandaBlocks attribute)</a>
+
+      <ul>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.data">(ophyd_async.panda.HDFPanda attribute)</a>
 </li>
+      </ul></li>
       <li><a href="generated/ophyd_async.panda.DataBlock.html#ophyd_async.panda.DataBlock">DataBlock (class in ophyd_async.panda)</a>
 </li>
       <li><a href="generated/ophyd_async.core.SignalBackend.html#ophyd_async.core.SignalBackend.datatype">datatype (ophyd_async.core.SignalBackend attribute)</a>
@@ -1013,18 +1053,26 @@ document.write(`
 </li>
       <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector">DemoADSimDetector (class in ophyd_async.epics.demo.demo_ad_sim_detector)</a>
 </li>
-      <li><a href="generated/ophyd_async.core.SignalR.html#ophyd_async.core.SignalR.describe">describe() (ophyd_async.core.SignalR method)</a>
+      <li><a href="generated/ophyd_async.core.HintedSignal.html#ophyd_async.core.HintedSignal.describe">describe() (ophyd_async.core.HintedSignal method)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.core.SignalR.html#ophyd_async.core.SignalR.describe">(ophyd_async.core.SignalR method)</a>
+</li>
         <li><a href="generated/ophyd_async.core.SignalRW.html#ophyd_async.core.SignalRW.describe">(ophyd_async.core.SignalRW method)</a>
 </li>
         <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.describe">(ophyd_async.core.StandardDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.describe">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.describe">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.describe">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.describe">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.describe">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.describe">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.describe">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -1036,25 +1084,45 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.describe">(ophyd_async.epics.motion.Motor method)</a>
 </li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.describe">(ophyd_async.panda.HDFPanda method)</a>
+</li>
       </ul></li>
       <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.describe_collect">describe_collect() (ophyd_async.core.StandardDetector method)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.describe_collect">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.describe_collect">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.describe_collect">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.describe_collect">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.describe_collect">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.describe_collect">(ophyd_async.panda.HDFPanda method)</a>
+</li>
       </ul></li>
-      <li><a href="generated/ophyd_async.core.HardwareTriggeredFlyable.html#ophyd_async.core.HardwareTriggeredFlyable.describe_configuration">describe_configuration() (ophyd_async.core.HardwareTriggeredFlyable method)</a>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/ophyd_async.core.ConfigSignal.html#ophyd_async.core.ConfigSignal.describe_configuration">describe_configuration() (ophyd_async.core.ConfigSignal method)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.core.HardwareTriggeredFlyable.html#ophyd_async.core.HardwareTriggeredFlyable.describe_configuration">(ophyd_async.core.HardwareTriggeredFlyable method)</a>
+</li>
         <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.describe_configuration">(ophyd_async.core.StandardDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.describe_configuration">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.describe_configuration">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.describe_configuration">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.describe_configuration">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.describe_configuration">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.describe_configuration">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.describe_configuration">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -1066,9 +1134,9 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.describe_configuration">(ophyd_async.epics.motion.Motor method)</a>
 </li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.describe_configuration">(ophyd_async.panda.HDFPanda method)</a>
+</li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/ophyd_async.core.DetectorControl.html#ophyd_async.core.DetectorControl">DetectorControl (class in ophyd_async.core)</a>
 </li>
       <li><a href="generated/ophyd_async.core.DetectorTrigger.html#ophyd_async.core.DetectorTrigger">DetectorTrigger (class in ophyd_async.core)</a>
@@ -1263,12 +1331,22 @@ document.write(`
       </ul></li>
       <li><a href="generated/ophyd_async.core.get_dtype.html#ophyd_async.core.get_dtype">get_dtype() (in module ophyd_async.core)</a>
 </li>
+      <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.get_external_trigger_gpio">get_external_trigger_gpio() (ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
       <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.get_index">get_index() (ophyd_async.core.StandardDetector method)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.get_index">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.get_index">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.get_index">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.get_index">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.get_index">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.get_index">(ophyd_async.panda.HDFPanda method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1311,14 +1389,38 @@ document.write(`
 </li>
       <li><a href="generated/ophyd_async.panda.DataBlock.html#ophyd_async.panda.DataBlock.hdf_directory">hdf_directory (ophyd_async.panda.DataBlock attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/ophyd_async.panda.DataBlock.html#ophyd_async.panda.DataBlock.hdf_file_name">hdf_file_name (ophyd_async.panda.DataBlock attribute)</a>
+</li>
+      <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda">HDFPanda (class in ophyd_async.panda)</a>
 </li>
       <li><a href="generated/ophyd_async.epics.demo.EnergyMode.html#ophyd_async.epics.demo.EnergyMode.high">high (ophyd_async.epics.demo.EnergyMode attribute)</a>
 </li>
-      <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.hints">hints (ophyd_async.epics.areadetector.PilatusDetector property)</a>
+      <li><a href="generated/ophyd_async.core.HintedSignal.html#ophyd_async.core.HintedSignal">HintedSignal (class in ophyd_async.core)</a>
 </li>
+      <li><a href="generated/ophyd_async.core.HintedSignal.html#ophyd_async.core.HintedSignal.hints">hints (ophyd_async.core.HintedSignal property)</a>
+
+      <ul>
+        <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.hints">(ophyd_async.core.StandardReadable property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.hints">(ophyd_async.epics.areadetector.AravisDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.hints">(ophyd_async.epics.areadetector.KinetixDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.hints">(ophyd_async.epics.areadetector.PilatusDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.hints">(ophyd_async.epics.areadetector.SingleTriggerDet property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.hints">(ophyd_async.epics.areadetector.VimbaDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.Mover.html#ophyd_async.epics.demo.Mover.hints">(ophyd_async.epics.demo.Mover property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.Sensor.html#ophyd_async.epics.demo.Sensor.hints">(ophyd_async.epics.demo.Sensor property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.demo.SensorGroup.html#ophyd_async.epics.demo.SensorGroup.hints">(ophyd_async.epics.demo.SensorGroup property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.hints">(ophyd_async.epics.motion.Motor property)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -1590,11 +1692,23 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.TriggerLogic.html#ophyd_async.core.TriggerLogic.kickoff">(ophyd_async.core.TriggerLogic method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.kickoff">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.kickoff">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.kickoff">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.kickoff">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.kickoff">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.kickoff">(ophyd_async.panda.HDFPanda method)</a>
+</li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector">KinetixDetector (class in ophyd_async.epics.areadetector)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -1741,6 +1855,8 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.HardwareTriggeredFlyable.html#ophyd_async.core.HardwareTriggeredFlyable.name">(ophyd_async.core.HardwareTriggeredFlyable property)</a>
 </li>
+        <li><a href="generated/ophyd_async.core.HintedSignal.html#ophyd_async.core.HintedSignal.name">(ophyd_async.core.HintedSignal property)</a>
+</li>
         <li><a href="generated/ophyd_async.core.Signal.html#ophyd_async.core.Signal.name">(ophyd_async.core.Signal property)</a>
 </li>
         <li><a href="generated/ophyd_async.core.SignalR.html#ophyd_async.core.SignalR.name">(ophyd_async.core.SignalR property)</a>
@@ -1755,9 +1871,15 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.name">(ophyd_async.core.StandardReadable property)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.name">(ophyd_async.epics.areadetector.AravisDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.name">(ophyd_async.epics.areadetector.KinetixDetector property)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.name">(ophyd_async.epics.areadetector.PilatusDetector property)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.name">(ophyd_async.epics.areadetector.SingleTriggerDet property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.name">(ophyd_async.epics.areadetector.VimbaDetector property)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.name">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector property)</a>
 </li>
@@ -1771,11 +1893,11 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.name">(ophyd_async.epics.motion.Motor property)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks.name">(ophyd_async.panda.CommonPandABlocks property)</a>
+        <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.name">(ophyd_async.panda.CommonPandaBlocks property)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.DataBlock.html#ophyd_async.panda.DataBlock.name">(ophyd_async.panda.DataBlock property)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.name">(ophyd_async.panda.PandA property)</a>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.name">(ophyd_async.panda.HDFPanda property)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.PcapBlock.html#ophyd_async.panda.PcapBlock.name">(ophyd_async.panda.PcapBlock property)</a>
 </li>
@@ -1964,8 +2086,6 @@ document.write(`
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA">PandA (class in ophyd_async.panda)</a>
-</li>
       <li><a href="generated/ophyd_async.panda.PandaPcapController.html#ophyd_async.panda.PandaPcapController">PandaPcapController (class in ophyd_async.panda)</a>
 </li>
       <li><a href="generated/ophyd_async.core.Device.html#ophyd_async.core.Device.parent">parent (ophyd_async.core.Device attribute)</a>
@@ -1989,9 +2109,15 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.parent">(ophyd_async.core.StandardReadable attribute)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.parent">(ophyd_async.epics.areadetector.AravisDetector attribute)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.parent">(ophyd_async.epics.areadetector.KinetixDetector attribute)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.parent">(ophyd_async.epics.areadetector.PilatusDetector attribute)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.parent">(ophyd_async.epics.areadetector.SingleTriggerDet attribute)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.parent">(ophyd_async.epics.areadetector.VimbaDetector attribute)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.parent">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector attribute)</a>
 </li>
@@ -2005,11 +2131,11 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.parent">(ophyd_async.epics.motion.Motor attribute)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks.parent">(ophyd_async.panda.CommonPandABlocks attribute)</a>
+        <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.parent">(ophyd_async.panda.CommonPandaBlocks attribute)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.DataBlock.html#ophyd_async.panda.DataBlock.parent">(ophyd_async.panda.DataBlock attribute)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.parent">(ophyd_async.panda.PandA attribute)</a>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.parent">(ophyd_async.panda.HDFPanda attribute)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.PcapBlock.html#ophyd_async.panda.PcapBlock.parent">(ophyd_async.panda.PcapBlock attribute)</a>
 </li>
@@ -2036,10 +2162,10 @@ document.write(`
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks.pcap">pcap (ophyd_async.panda.CommonPandABlocks attribute)</a>
+      <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.pcap">pcap (ophyd_async.panda.CommonPandaBlocks attribute)</a>
 
       <ul>
-        <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.pcap">(ophyd_async.panda.PandA attribute)</a>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.pcap">(ophyd_async.panda.HDFPanda attribute)</a>
 </li>
       </ul></li>
       <li><a href="generated/ophyd_async.panda.PcapBlock.html#ophyd_async.panda.PcapBlock">PcapBlock (class in ophyd_async.panda)</a>
@@ -2087,19 +2213,27 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.TriggerLogic.html#ophyd_async.core.TriggerLogic.prepare">(ophyd_async.core.TriggerLogic method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.prepare">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.prepare">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.prepare">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.prepare">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.prepare">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.prepare">(ophyd_async.panda.HDFPanda method)</a>
 </li>
       </ul></li>
       <li><a href="generated/ophyd_async.panda.SeqBlock.html#ophyd_async.panda.SeqBlock.prescale">prescale (ophyd_async.panda.SeqBlock attribute)</a>
 </li>
       <li><a href="generated/ophyd_async.panda.SeqBlock.html#ophyd_async.panda.SeqBlock.prescale_units">prescale_units (ophyd_async.panda.SeqBlock attribute)</a>
 </li>
-      <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks.pulse">pulse (ophyd_async.panda.CommonPandABlocks attribute)</a>
+      <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.pulse">pulse (ophyd_async.panda.CommonPandaBlocks attribute)</a>
 
       <ul>
-        <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.pulse">(ophyd_async.panda.PandA attribute)</a>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.pulse">(ophyd_async.panda.HDFPanda attribute)</a>
 </li>
       </ul></li>
       <li><a href="generated/ophyd_async.panda.PulseBlock.html#ophyd_async.panda.PulseBlock">PulseBlock (class in ophyd_async.panda)</a>
@@ -2120,18 +2254,26 @@ document.write(`
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="generated/ophyd_async.core.SignalR.html#ophyd_async.core.SignalR.read">read() (ophyd_async.core.SignalR method)</a>
+      <li><a href="generated/ophyd_async.core.HintedSignal.html#ophyd_async.core.HintedSignal.read">read() (ophyd_async.core.HintedSignal method)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.core.SignalR.html#ophyd_async.core.SignalR.read">(ophyd_async.core.SignalR method)</a>
+</li>
         <li><a href="generated/ophyd_async.core.SignalRW.html#ophyd_async.core.SignalRW.read">(ophyd_async.core.SignalRW method)</a>
 </li>
         <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.read">(ophyd_async.core.StandardDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.read">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.read">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.read">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.read">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.read">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.read">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.read">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -2143,17 +2285,27 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.read">(ophyd_async.epics.motion.Motor method)</a>
 </li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.read">(ophyd_async.panda.HDFPanda method)</a>
+</li>
       </ul></li>
-      <li><a href="generated/ophyd_async.core.HardwareTriggeredFlyable.html#ophyd_async.core.HardwareTriggeredFlyable.read_configuration">read_configuration() (ophyd_async.core.HardwareTriggeredFlyable method)</a>
+      <li><a href="generated/ophyd_async.core.ConfigSignal.html#ophyd_async.core.ConfigSignal.read_configuration">read_configuration() (ophyd_async.core.ConfigSignal method)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.core.HardwareTriggeredFlyable.html#ophyd_async.core.HardwareTriggeredFlyable.read_configuration">(ophyd_async.core.HardwareTriggeredFlyable method)</a>
+</li>
         <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.read_configuration">(ophyd_async.core.StandardDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.read_configuration">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.read_configuration">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.read_configuration">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.read_configuration">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.read_configuration">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.read_configuration">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.read_configuration">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -2164,6 +2316,8 @@ document.write(`
         <li><a href="generated/ophyd_async.epics.demo.SensorGroup.html#ophyd_async.epics.demo.SensorGroup.read_configuration">(ophyd_async.epics.demo.SensorGroup method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.read_configuration">(ophyd_async.epics.motion.Motor method)</a>
+</li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.read_configuration">(ophyd_async.panda.HDFPanda method)</a>
 </li>
       </ul></li>
       <li><a href="generated/ophyd_async.core.DetectorTrigger.html#ophyd_async.core.DetectorTrigger.removeprefix">removeprefix() (ophyd_async.core.DetectorTrigger method)</a>
@@ -2342,10 +2496,10 @@ document.write(`
 </li>
       <li><a href="generated/ophyd_async.epics.demo.SensorGroup.html#ophyd_async.epics.demo.SensorGroup">SensorGroup (class in ophyd_async.epics.demo)</a>
 </li>
-      <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks.seq">seq (ophyd_async.panda.CommonPandABlocks attribute)</a>
+      <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.seq">seq (ophyd_async.panda.CommonPandaBlocks attribute)</a>
 
       <ul>
-        <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.seq">(ophyd_async.panda.PandA attribute)</a>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.seq">(ophyd_async.panda.HDFPanda attribute)</a>
 </li>
       </ul></li>
       <li><a href="generated/ophyd_async.panda.seq_table_from_arrays.html#ophyd_async.panda.seq_table_from_arrays">seq_table_from_arrays() (in module ophyd_async.panda)</a>
@@ -2378,6 +2532,8 @@ document.write(`
         <li><a href="generated/ophyd_async.core.SimSignalBackend.html#ophyd_async.core.SimSignalBackend.set_callback">(ophyd_async.core.SimSignalBackend method)</a>
 </li>
       </ul></li>
+      <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.set_external_trigger_gpio">set_external_trigger_gpio() (ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
       <li><a href="generated/ophyd_async.core.Device.html#ophyd_async.core.Device.set_name">set_name() (ophyd_async.core.Device method)</a>
 
       <ul>
@@ -2399,9 +2555,15 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.set_name">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.set_name">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.set_name">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.set_name">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.set_name">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.set_name">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.set_name">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -2415,11 +2577,11 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.set_name">(ophyd_async.epics.motion.Motor method)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.CommonPandABlocks.html#ophyd_async.panda.CommonPandABlocks.set_name">(ophyd_async.panda.CommonPandABlocks method)</a>
+        <li><a href="generated/ophyd_async.panda.CommonPandaBlocks.html#ophyd_async.panda.CommonPandaBlocks.set_name">(ophyd_async.panda.CommonPandaBlocks method)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.DataBlock.html#ophyd_async.panda.DataBlock.set_name">(ophyd_async.panda.DataBlock method)</a>
 </li>
-        <li><a href="generated/ophyd_async.panda.PandA.html#ophyd_async.panda.PandA.set_name">(ophyd_async.panda.PandA method)</a>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.set_name">(ophyd_async.panda.HDFPanda method)</a>
 </li>
         <li><a href="generated/ophyd_async.panda.PcapBlock.html#ophyd_async.panda.PcapBlock.set_name">(ophyd_async.panda.PcapBlock method)</a>
 </li>
@@ -2547,9 +2709,15 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.stage">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.stage">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.stage">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.stage">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.stage">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.stage">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.stage">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -2560,6 +2728,8 @@ document.write(`
         <li><a href="generated/ophyd_async.epics.demo.SensorGroup.html#ophyd_async.epics.demo.SensorGroup.stage">(ophyd_async.epics.demo.SensorGroup method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.stage">(ophyd_async.epics.motion.Motor method)</a>
+</li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.stage">(ophyd_async.panda.HDFPanda method)</a>
 </li>
       </ul></li>
       <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector">StandardDetector (class in ophyd_async.core)</a>
@@ -2717,11 +2887,19 @@ document.write(`
       <ul>
         <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.trigger">(ophyd_async.core.StandardDetector method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.trigger">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.trigger">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.trigger">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.trigger">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.trigger">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.trigger">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.trigger">(ophyd_async.panda.HDFPanda method)</a>
 </li>
       </ul></li>
       <li><a href="generated/ophyd_async.core.HardwareTriggeredFlyable.html#ophyd_async.core.HardwareTriggeredFlyable.trigger_logic">trigger_logic (ophyd_async.core.HardwareTriggeredFlyable property)</a>
@@ -2736,6 +2914,8 @@ document.write(`
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="generated/ophyd_async.core.HintedSignal.html#ophyd_async.core.HintedSignal.uncached">uncached() (ophyd_async.core.HintedSignal class method)</a>
+</li>
       <li><a href="generated/ophyd_async.core.HardwareTriggeredFlyable.html#ophyd_async.core.HardwareTriggeredFlyable.unstage">unstage() (ophyd_async.core.HardwareTriggeredFlyable method)</a>
 
       <ul>
@@ -2747,9 +2927,15 @@ document.write(`
 </li>
         <li><a href="generated/ophyd_async.core.StandardReadable.html#ophyd_async.core.StandardReadable.unstage">(ophyd_async.core.StandardReadable method)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.unstage">(ophyd_async.epics.areadetector.AravisDetector method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.unstage">(ophyd_async.epics.areadetector.KinetixDetector method)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.unstage">(ophyd_async.epics.areadetector.PilatusDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.areadetector.SingleTriggerDet.html#ophyd_async.epics.areadetector.SingleTriggerDet.unstage">(ophyd_async.epics.areadetector.SingleTriggerDet method)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.unstage">(ophyd_async.epics.areadetector.VimbaDetector method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.unstage">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector method)</a>
 </li>
@@ -2760,6 +2946,8 @@ document.write(`
         <li><a href="generated/ophyd_async.epics.demo.SensorGroup.html#ophyd_async.epics.demo.SensorGroup.unstage">(ophyd_async.epics.demo.SensorGroup method)</a>
 </li>
         <li><a href="generated/ophyd_async.epics.motion.Motor.html#ophyd_async.epics.motion.Motor.unstage">(ophyd_async.epics.motion.Motor method)</a>
+</li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.unstage">(ophyd_async.panda.HDFPanda method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -2804,6 +2992,8 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/ophyd_async.core.DetectorTrigger.html#ophyd_async.core.DetectorTrigger.variable_gate">variable_gate (ophyd_async.core.DetectorTrigger attribute)</a>
 </li>
+      <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector">VimbaDetector (class in ophyd_async.epics.areadetector)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -2818,18 +3008,26 @@ document.write(`
 </li>
       <li><a href="generated/ophyd_async.core.AsyncStatus.html#ophyd_async.core.AsyncStatus.watch">watch() (ophyd_async.core.AsyncStatus method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/ophyd_async.panda.PulseBlock.html#ophyd_async.panda.PulseBlock.width">width (ophyd_async.panda.PulseBlock attribute)</a>
 </li>
       <li><a href="generated/ophyd_async.core.AsyncStatus.html#ophyd_async.core.AsyncStatus.wrap">wrap() (ophyd_async.core.AsyncStatus class method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generated/ophyd_async.core.StandardDetector.html#ophyd_async.core.StandardDetector.writer">writer (ophyd_async.core.StandardDetector property)</a>
 
       <ul>
+        <li><a href="generated/ophyd_async.epics.areadetector.AravisDetector.html#ophyd_async.epics.areadetector.AravisDetector.writer">(ophyd_async.epics.areadetector.AravisDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.epics.areadetector.KinetixDetector.html#ophyd_async.epics.areadetector.KinetixDetector.writer">(ophyd_async.epics.areadetector.KinetixDetector property)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.areadetector.PilatusDetector.html#ophyd_async.epics.areadetector.PilatusDetector.writer">(ophyd_async.epics.areadetector.PilatusDetector property)</a>
 </li>
+        <li><a href="generated/ophyd_async.epics.areadetector.VimbaDetector.html#ophyd_async.epics.areadetector.VimbaDetector.writer">(ophyd_async.epics.areadetector.VimbaDetector property)</a>
+</li>
         <li><a href="generated/ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.html#ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector.writer">(ophyd_async.epics.demo.demo_ad_sim_detector.DemoADSimDetector property)</a>
+</li>
+        <li><a href="generated/ophyd_async.panda.HDFPanda.html#ophyd_async.panda.HDFPanda.writer">(ophyd_async.panda.HDFPanda property)</a>
 </li>
       </ul></li>
   </ul></td>
