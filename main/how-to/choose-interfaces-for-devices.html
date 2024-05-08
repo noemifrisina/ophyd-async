@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Decision Flowchart for Creating a New ophyd_async Device &#8212; ophyd-async 0.1.dev515+gf1ec405 documentation</title>
+    <title>Decision Flowchart for Creating a New ophyd_async Device &#8212; ophyd-async 0.1.dev526+g426b420 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../_static/documentation_options.js?v=8f16a9af"></script>
+    <script src="../_static/documentation_options.js?v=908e1d1b"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -442,6 +442,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="compound-devices.html">Compound Devices Together</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute to the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="make-a-simple-device.html">Make a Simple Device</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-a-standard-detector.html">Make a StandardDetector</a></li>
 <li class="toctree-l1"><a class="reference internal" href="write-tests-for-devices.html">Write Tests for Devices</a></li>
 </ul>
 </div>
@@ -504,14 +505,14 @@ document.write(`
 <h1>Decision Flowchart for Creating a New ophyd_async Device<a class="headerlink" href="#decision-flowchart-for-creating-a-new-ophyd-async-device" title="Link to this heading">#</a></h1>
 <p>This document contains a decision flowchart designed to guide developers through the process of creating a new ophyd_async device in the Ophyd library. It outlines a series of decisions based on the device’s capabilities, such as file writing, reading values from process variables (PVs), and mobility within scans. The flowchart helps in determining the appropriate class inheritance and methods to override for optimal device functionality and integration into the system.</p>
 <div class="mermaid">
-            flowchart TD
-start([Start]) --&gt; isFileWriting{Is it a File Writing Detector?}
-isFileWriting -- Yes --&gt; useStandardDetector[Use StandardDetector]
-isFileWriting -- No --&gt; producesPVValue{Does it produce a value from a PV you want to read in a scan?}
-producesPVValue -- Yes --&gt; isMovable{Is it something that you move in a scan?}
-isMovable -- Yes --&gt; useReadableMovable[Use StandardReadable + AsyncMovable + Override set method]
-isMovable -- No --&gt; useReadable[Use StandardReadable]
-producesPVValue -- No --&gt; useDevice[Use Device]
+              flowchart TD
+    start([Start]) --&gt; isFileWriting{Is it a File Writing Detector?}
+    isFileWriting -- Yes --&gt; useStandardDetector[Use StandardDetector]
+    isFileWriting -- No --&gt; producesPVValue{Does it produce a value from a PV you want to read in a scan?}
+    producesPVValue -- Yes --&gt; isMovable{Is it something that you move in a scan?}
+    isMovable -- Yes --&gt; useReadableMovable[Use StandardReadable + AsyncMovable + Override set method]
+    isMovable -- No --&gt; useReadable[Use StandardReadable]
+    producesPVValue -- No --&gt; useDevice[Use Device]
         </div></section>
 
 
