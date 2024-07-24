@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overview: module code &#8212; ophyd-async 0.1.dev557+g0b05b9c documentation</title>
+    <title>Overview: module code &#8212; ophyd-async 0.1.dev592+g955414a documentation</title>
   
   
   
@@ -17,28 +17,29 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9134a6a8"></script>
+    <script src="../_static/documentation_options.js?v=46697b8b"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -48,7 +49,7 @@
     <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/index';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://blueskyproject.io/ophyd-async/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
@@ -111,7 +112,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -120,6 +121,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -148,38 +151,38 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../how-to.html">
     How-to Guides
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../explanations.html">
     Explanations
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../reference.html">
     Reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://blueskyproject.io">
     Bluesky Project
   </a>
@@ -198,7 +201,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -212,15 +215,15 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -231,7 +234,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/bluesky/ophyd-async" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/bluesky/ophyd-async" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -243,7 +246,7 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
+          <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-cube fa-lg" aria-hidden="true"></i>
             <span class="sr-only">PyPI</span></a>
         </li>
 </ul></div>
@@ -254,7 +257,7 @@ document.write(`
   <div class="version-switcher__container dropdown">
     <button id="pst-version-switcher-button-2"
       type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
       data-bs-toggle="dropdown"
       aria-haspopup="listbox"
       aria-controls="pst-version-switcher-list-2"
@@ -281,7 +284,7 @@ document.write(`
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -316,38 +319,38 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../how-to.html">
     How-to Guides
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../explanations.html">
     Explanations
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../reference.html">
     Reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-external" href="https://blueskyproject.io">
     Bluesky Project
   </a>
@@ -367,15 +370,15 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -386,7 +389,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/bluesky/ophyd-async" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/bluesky/ophyd-async" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -398,7 +401,7 @@ document.write(`
           
           
           
-          <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fas fa-cube fa-lg" aria-hidden="true"></i></span>
+          <a href="https://pypi.org/project/ophyd-async" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fas fa-cube fa-lg" aria-hidden="true"></i>
             <span class="sr-only">PyPI</span></a>
         </li>
 </ul></div>
@@ -409,7 +412,7 @@ document.write(`
   <div class="version-switcher__container dropdown">
     <button id="pst-version-switcher-button-3"
       type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
       data-bs-toggle="dropdown"
       aria-haspopup="listbox"
       aria-controls="pst-version-switcher-list-3"
@@ -481,36 +484,55 @@ document.write(`
                 <article class="bd-article">
                   
   <h1>All modules for which code is available</h1>
-<ul><li><a href="ophyd_async/core/_providers.html">ophyd_async.core._providers</a></li>
-<li><a href="ophyd_async/core/async_status.html">ophyd_async.core.async_status</a></li>
-<li><a href="ophyd_async/core/detector.html">ophyd_async.core.detector</a></li>
-<li><a href="ophyd_async/core/device.html">ophyd_async.core.device</a></li>
-<li><a href="ophyd_async/core/device_save_loader.html">ophyd_async.core.device_save_loader</a></li>
-<li><a href="ophyd_async/core/flyer.html">ophyd_async.core.flyer</a></li>
-<li><a href="ophyd_async/core/mock_signal_backend.html">ophyd_async.core.mock_signal_backend</a></li>
-<li><a href="ophyd_async/core/mock_signal_utils.html">ophyd_async.core.mock_signal_utils</a></li>
-<li><a href="ophyd_async/core/signal.html">ophyd_async.core.signal</a></li>
-<li><a href="ophyd_async/core/signal_backend.html">ophyd_async.core.signal_backend</a></li>
-<li><a href="ophyd_async/core/soft_signal_backend.html">ophyd_async.core.soft_signal_backend</a></li>
-<li><a href="ophyd_async/core/standard_readable.html">ophyd_async.core.standard_readable</a></li>
-<li><a href="ophyd_async/core/utils.html">ophyd_async.core.utils</a></li>
-<li><a href="ophyd_async/epics/areadetector/aravis.html">ophyd_async.epics.areadetector.aravis</a></li>
-<li><a href="ophyd_async/epics/areadetector/kinetix.html">ophyd_async.epics.areadetector.kinetix</a></li>
-<li><a href="ophyd_async/epics/areadetector/pilatus.html">ophyd_async.epics.areadetector.pilatus</a></li>
-<li><a href="ophyd_async/epics/areadetector/single_trigger_det.html">ophyd_async.epics.areadetector.single_trigger_det</a></li>
-<li><a href="ophyd_async/epics/areadetector/utils.html">ophyd_async.epics.areadetector.utils</a></li>
-<li><a href="ophyd_async/epics/areadetector/vimba.html">ophyd_async.epics.areadetector.vimba</a></li>
-<li><a href="ophyd_async/epics/demo.html">ophyd_async.epics.demo</a></li>
-<ul><li><a href="ophyd_async/epics/demo/demo_ad_sim_detector.html">ophyd_async.epics.demo.demo_ad_sim_detector</a></li>
-</ul><li><a href="ophyd_async/epics/motion/motor.html">ophyd_async.epics.motion.motor</a></li>
-<li><a href="ophyd_async/epics/pvi/pvi.html">ophyd_async.epics.pvi.pvi</a></li>
-<li><a href="ophyd_async/epics/signal/signal.html">ophyd_async.epics.signal.signal</a></li>
-<li><a href="ophyd_async/panda/_common_blocks.html">ophyd_async.panda._common_blocks</a></li>
-<li><a href="ophyd_async/panda/_hdf_panda.html">ophyd_async.panda._hdf_panda</a></li>
-<li><a href="ophyd_async/panda/_panda_controller.html">ophyd_async.panda._panda_controller</a></li>
-<li><a href="ophyd_async/panda/_table.html">ophyd_async.panda._table</a></li>
-<li><a href="ophyd_async/panda/_trigger.html">ophyd_async.panda._trigger</a></li>
-<li><a href="ophyd_async/panda/_utils.html">ophyd_async.panda._utils</a></li>
+<ul><li><a href="ophyd_async/core/_detector.html">ophyd_async.core._detector</a></li>
+<li><a href="ophyd_async/core/_device.html">ophyd_async.core._device</a></li>
+<li><a href="ophyd_async/core/_device_save_loader.html">ophyd_async.core._device_save_loader</a></li>
+<li><a href="ophyd_async/core/_flyer.html">ophyd_async.core._flyer</a></li>
+<li><a href="ophyd_async/core/_hdf_dataset.html">ophyd_async.core._hdf_dataset</a></li>
+<li><a href="ophyd_async/core/_log.html">ophyd_async.core._log</a></li>
+<li><a href="ophyd_async/core/_mock_signal_backend.html">ophyd_async.core._mock_signal_backend</a></li>
+<li><a href="ophyd_async/core/_mock_signal_utils.html">ophyd_async.core._mock_signal_utils</a></li>
+<li><a href="ophyd_async/core/_protocol.html">ophyd_async.core._protocol</a></li>
+<li><a href="ophyd_async/core/_providers.html">ophyd_async.core._providers</a></li>
+<li><a href="ophyd_async/core/_readable.html">ophyd_async.core._readable</a></li>
+<li><a href="ophyd_async/core/_signal.html">ophyd_async.core._signal</a></li>
+<li><a href="ophyd_async/core/_signal_backend.html">ophyd_async.core._signal_backend</a></li>
+<li><a href="ophyd_async/core/_soft_signal_backend.html">ophyd_async.core._soft_signal_backend</a></li>
+<li><a href="ophyd_async/core/_status.html">ophyd_async.core._status</a></li>
+<li><a href="ophyd_async/core/_utils.html">ophyd_async.core._utils</a></li>
+<li><a href="ophyd_async/epics/adaravis/_aravis.html">ophyd_async.epics.adaravis._aravis</a></li>
+<li><a href="ophyd_async/epics/adaravis/_aravis_controller.html">ophyd_async.epics.adaravis._aravis_controller</a></li>
+<li><a href="ophyd_async/epics/adaravis/_aravis_io.html">ophyd_async.epics.adaravis._aravis_io</a></li>
+<li><a href="ophyd_async/epics/adcore/_core_io.html">ophyd_async.epics.adcore._core_io</a></li>
+<li><a href="ophyd_async/epics/adcore/_core_logic.html">ophyd_async.epics.adcore._core_logic</a></li>
+<li><a href="ophyd_async/epics/adcore/_hdf_writer.html">ophyd_async.epics.adcore._hdf_writer</a></li>
+<li><a href="ophyd_async/epics/adcore/_single_trigger.html">ophyd_async.epics.adcore._single_trigger</a></li>
+<li><a href="ophyd_async/epics/adcore/_utils.html">ophyd_async.epics.adcore._utils</a></li>
+<li><a href="ophyd_async/epics/adkinetix/_kinetix.html">ophyd_async.epics.adkinetix._kinetix</a></li>
+<li><a href="ophyd_async/epics/adkinetix/_kinetix_controller.html">ophyd_async.epics.adkinetix._kinetix_controller</a></li>
+<li><a href="ophyd_async/epics/adkinetix/_kinetix_io.html">ophyd_async.epics.adkinetix._kinetix_io</a></li>
+<li><a href="ophyd_async/epics/adpilatus/_pilatus.html">ophyd_async.epics.adpilatus._pilatus</a></li>
+<li><a href="ophyd_async/epics/adpilatus/_pilatus_controller.html">ophyd_async.epics.adpilatus._pilatus_controller</a></li>
+<li><a href="ophyd_async/epics/adpilatus/_pilatus_io.html">ophyd_async.epics.adpilatus._pilatus_io</a></li>
+<li><a href="ophyd_async/epics/adsimdetector/_sim.html">ophyd_async.epics.adsimdetector._sim</a></li>
+<li><a href="ophyd_async/epics/adsimdetector/_sim_controller.html">ophyd_async.epics.adsimdetector._sim_controller</a></li>
+<li><a href="ophyd_async/epics/advimba/_vimba.html">ophyd_async.epics.advimba._vimba</a></li>
+<li><a href="ophyd_async/epics/advimba/_vimba_controller.html">ophyd_async.epics.advimba._vimba_controller</a></li>
+<li><a href="ophyd_async/epics/advimba/_vimba_io.html">ophyd_async.epics.advimba._vimba_io</a></li>
+<li><a href="ophyd_async/epics/demo/_mover.html">ophyd_async.epics.demo._mover</a></li>
+<li><a href="ophyd_async/epics/demo/_sensor.html">ophyd_async.epics.demo._sensor</a></li>
+<li><a href="ophyd_async/epics/motor.html">ophyd_async.epics.motor</a></li>
+<li><a href="ophyd_async/epics/pvi/_pvi.html">ophyd_async.epics.pvi._pvi</a></li>
+<li><a href="ophyd_async/epics/signal/_common.html">ophyd_async.epics.signal._common</a></li>
+<li><a href="ophyd_async/epics/signal/_p4p.html">ophyd_async.epics.signal._p4p</a></li>
+<li><a href="ophyd_async/epics/signal/_signal.html">ophyd_async.epics.signal._signal</a></li>
+<li><a href="ophyd_async/fastcs/panda/_common_blocks.html">ophyd_async.fastcs.panda._common_blocks</a></li>
+<li><a href="ophyd_async/fastcs/panda/_hdf_panda.html">ophyd_async.fastcs.panda._hdf_panda</a></li>
+<li><a href="ophyd_async/fastcs/panda/_hdf_writer.html">ophyd_async.fastcs.panda._hdf_writer</a></li>
+<li><a href="ophyd_async/fastcs/panda/_panda_controller.html">ophyd_async.fastcs.panda._panda_controller</a></li>
+<li><a href="ophyd_async/fastcs/panda/_table.html">ophyd_async.fastcs.panda._table</a></li>
+<li><a href="ophyd_async/fastcs/panda/_trigger.html">ophyd_async.fastcs.panda._trigger</a></li>
+<li><a href="ophyd_async/fastcs/panda/_utils.html">ophyd_async.fastcs.panda._utils</a></li>
 </ul>
 
                 </article>
@@ -540,8 +562,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -552,7 +574,7 @@ document.write(`
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
 </p></div>
       
     </div>
