@@ -11,6 +11,16 @@
 
     
     
+    .. rubric:: Submodules
+
+    .. autosummary::
+        :toctree:
+        :template: custom-module-template.rst
+        :recursive:
+    
+        ophyd_async.tango.core
+        ophyd_async.tango.sim
+    
     
 
     
