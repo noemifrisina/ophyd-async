@@ -19,10 +19,6 @@
   - ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.ADBaseIO
     :summary:
     ```
-* - {py:obj}`ADCallbacks <ophyd_async.epics.adcore._core_io.ADCallbacks>`
-  - ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.ADCallbacks
-    :summary:
-    ```
 * - {py:obj}`ADCompression <ophyd_async.epics.adcore._core_io.ADCompression>`
   - ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.ADCompression
     :summary:
@@ -51,6 +47,10 @@
   - ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDFileIO
     :summary:
     ```
+* - {py:obj}`NDFilePluginIO <ophyd_async.epics.adcore._core_io.NDFilePluginIO>`
+  - ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDFilePluginIO
+    :summary:
+    ```
 * - {py:obj}`NDFileHDFIO <ophyd_async.epics.adcore._core_io.NDFileHDFIO>`
   - ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDFileHDFIO
     :summary:
@@ -61,6 +61,10 @@
     ```
 * - {py:obj}`NDPluginStatsIO <ophyd_async.epics.adcore._core_io.NDPluginStatsIO>`
   - ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDPluginStatsIO
+    :summary:
+    ```
+* - {py:obj}`NDROIStatIO <ophyd_async.epics.adcore._core_io.NDROIStatIO>`
+  - ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDROIStatIO
     :summary:
     ```
 * - {py:obj}`ADBaseDatasetDescriber <ophyd_async.epics.adcore._core_io.ADBaseDatasetDescriber>`
@@ -135,8 +139,8 @@
 :class: autosummary longtable
 :align: left
 
-* - {py:obj}`stop_busy_record <ophyd_async.epics.adcore._utils.stop_busy_record>`
-  - ```{autodoc2-docstring} ophyd_async.epics.adcore._utils.stop_busy_record
+* - {py:obj}`ndattributes_to_xml <ophyd_async.epics.adcore._utils.ndattributes_to_xml>`
+  - ```{autodoc2-docstring} ophyd_async.epics.adcore._utils.ndattributes_to_xml
     :summary:
     ```
 ````
@@ -214,36 +218,6 @@ Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDArrayBaseIO`
    None
 
 ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.ADBaseIO.detector_state
-```
-
-````
-
-`````
-
-`````{py:class} ADCallbacks()
-:canonical: ophyd_async.epics.adcore._core_io.ADCallbacks
-
-Bases: {py:obj}`ophyd_async.core.StrictEnum`
-
-```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.ADCallbacks
-```
-
-````{py:attribute} ENABLE
-:canonical: ophyd_async.epics.adcore._core_io.ADCallbacks.ENABLE
-:value: >
-   'Enable'
-
-```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.ADCallbacks.ENABLE
-```
-
-````
-
-````{py:attribute} DISABLE
-:canonical: ophyd_async.epics.adcore._core_io.ADCallbacks.DISABLE
-:value: >
-   'Disable'
-
-```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.ADCallbacks.DISABLE
 ```
 
 ````
@@ -541,7 +515,7 @@ Bases: {py:obj}`ophyd_async.core.StrictEnum`
 
 `````
 
-````{py:class} ContAcqAreaDetector(prefix: str, path_provider: ~ophyd_async.core._providers.PathProvider, drv_cls: type[~ophyd_async.epics.adcore._core_io.ADBaseIO] = ADBaseIO, drv_suffix: str = 'cam1:', cb_suffix: str = 'CB1:', writer_cls: type[~ophyd_async.epics.adcore._core_writer.ADWriter] = ADHDFWriter, fileio_suffix: str | None = None, name: str = '', plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None, config_sigs: ~collections.abc.Sequence[~ophyd_async.core.SignalR] = ())
+````{py:class} ContAcqAreaDetector(prefix: str, path_provider: ~ophyd_async.core.PathProvider, drv_cls: type[~ophyd_async.epics.adcore._core_io.ADBaseIO] = ADBaseIO, drv_suffix: str = 'cam1:', cb_suffix: str = 'CB1:', writer_cls: type[~ophyd_async.epics.adcore._core_writer.ADWriter] = ADHDFWriter, fileio_suffix: str | None = None, name: str = '', plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None, config_sigs: ~collections.abc.Sequence[~ophyd_async.core.SignalR] = ())
 :canonical: ophyd_async.epics.adcore._core_detector.ContAcqAreaDetector
 
 Bases: {py:obj}`ophyd_async.epics.adcore._core_detector.AreaDetector`\[{py:obj}`ophyd_async.epics.adcore._core_logic.ADBaseContAcqController`\]
@@ -652,7 +626,7 @@ Bases: {py:obj}`ophyd_async.epics.core.EpicsDevice`
 `````{py:class} NDFileIO(prefix: str, with_pvi: bool = False, name: str = '')
 :canonical: ophyd_async.epics.adcore._core_io.NDFileIO
 
-Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDPluginBaseIO`
+Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDArrayBaseIO`
 
 ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDFileIO
 ```
@@ -813,10 +787,20 @@ Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDPluginBaseIO`
 
 `````
 
+````{py:class} NDFilePluginIO(prefix: str, with_pvi: bool = False, name: str = '')
+:canonical: ophyd_async.epics.adcore._core_io.NDFilePluginIO
+
+Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDPluginBaseIO`, {py:obj}`ophyd_async.epics.adcore._core_io.NDFileIO`
+
+```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDFilePluginIO
+```
+
+````
+
 `````{py:class} NDFileHDFIO(prefix: str, with_pvi: bool = False, name: str = '')
 :canonical: ophyd_async.epics.adcore._core_io.NDFileHDFIO
 
-Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDFileIO`
+Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDFilePluginIO`
 
 ```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDFileHDFIO
 ```
@@ -889,7 +873,7 @@ Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDFileIO`
 
 ````{py:attribute} num_frames_chunks
 :canonical: ophyd_async.epics.adcore._core_io.NDFileHDFIO.num_frames_chunks
-:type: ~typing.Annotated[~ophyd_async.core.SignalR[int], PvSuffix('NumFramesChunks_RBV')]
+:type: ~typing.Annotated[~ophyd_async.core.SignalRW[int], ophyd_async.epics.core.PvSuffix.rbv('NumFramesChunks')]
 :value: >
    None
 
@@ -943,7 +927,7 @@ Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDArrayBaseIO`
 
 ````{py:attribute} enable_callbacks
 :canonical: ophyd_async.epics.adcore._core_io.NDPluginBaseIO.enable_callbacks
-:type: ~typing.Annotated[~ophyd_async.core.SignalRW[~ophyd_async.epics.adcore._core_io.ADCallbacks], ophyd_async.epics.core.PvSuffix.rbv('EnableCallbacks')]
+:type: ~typing.Annotated[~ophyd_async.core.SignalRW[~ophyd_async.core.EnableDisable], ophyd_async.epics.core.PvSuffix.rbv('EnableCallbacks')]
 :value: >
    None
 
@@ -1162,6 +1146,16 @@ Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDPluginBaseIO`
 
 `````
 
+````{py:class} NDROIStatIO(prefix, num_channels=8, with_pvi=False, name='')
+:canonical: ophyd_async.epics.adcore._core_io.NDROIStatIO
+
+Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDPluginBaseIO`
+
+```{autodoc2-docstring} ophyd_async.epics.adcore._core_io.NDROIStatIO
+```
+
+````
+
 ````{py:data} DEFAULT_GOOD_STATES
 :canonical: ophyd_async.epics.adcore._core_logic.DEFAULT_GOOD_STATES
 :type: frozenset[~ophyd_async.epics.adcore._core_io.ADState]
@@ -1265,10 +1259,10 @@ Bases: {py:obj}`ophyd_async.core.DetectorController`, {py:obj}`typing.Generic`\[
 
 `````
 
-`````{py:class} ADWriter(fileio: ~ophyd_async.epics.adcore._core_writer.NDFileIOT, path_provider: ~ophyd_async.core._providers.PathProvider, dataset_describer: ~ophyd_async.core._providers.DatasetDescriber, file_extension: str = '', mimetype: str = '', plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None)
+`````{py:class} ADWriter(fileio: ~ophyd_async.epics.adcore._core_writer.NDFileIOT, path_provider: ~ophyd_async.core.PathProvider, dataset_describer: ~ophyd_async.core.DatasetDescriber, file_extension: str = '', mimetype: str = '', plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None)
 :canonical: ophyd_async.epics.adcore._core_writer.ADWriter
 
-Bases: {py:obj}`ophyd_async.core._detector.DetectorWriter`, {py:obj}`typing.Generic`\[{py:obj}`ophyd_async.epics.adcore._core_writer.NDFileIOT`\]
+Bases: {py:obj}`ophyd_async.core.DetectorWriter`, {py:obj}`typing.Generic`\[{py:obj}`ophyd_async.epics.adcore._core_writer.NDFileIOT`\]
 
 ```{autodoc2-docstring} ophyd_async.epics.adcore._core_writer.ADWriter
 ```
@@ -1284,20 +1278,11 @@ Bases: {py:obj}`ophyd_async.core._detector.DetectorWriter`, {py:obj}`typing.Gene
 
 ````
 
-````{py:method} with_io(prefix: str, path_provider: ~ophyd_async.core._providers.PathProvider, dataset_source: ~ophyd_async.epics.adcore._core_io.NDArrayBaseIO | None = None, fileio_suffix: str | None = None, plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None) -> ~ophyd_async.epics.adcore._core_writer.ADWriterT
+````{py:method} with_io(prefix: str, path_provider: ~ophyd_async.core.PathProvider, dataset_source: ~ophyd_async.epics.adcore._core_io.NDArrayBaseIO | None = None, fileio_suffix: str | None = None, plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None) -> ~ophyd_async.epics.adcore._core_writer.ADWriterT
 :canonical: ophyd_async.epics.adcore._core_writer.ADWriter.with_io
 :classmethod:
 
 ```{autodoc2-docstring} ophyd_async.epics.adcore._core_writer.ADWriter.with_io
-```
-
-````
-
-````{py:method} begin_capture(name: str) -> None
-:canonical: ophyd_async.epics.adcore._core_writer.ADWriter.begin_capture
-:async:
-
-```{autodoc2-docstring} ophyd_async.epics.adcore._core_writer.ADWriter.begin_capture
 ```
 
 ````
@@ -1396,10 +1381,10 @@ Bases: {py:obj}`ophyd_async.epics.adcore._core_writer.ADWriter`\[{py:obj}`ophyd_
 
 `````
 
-`````{py:class} ADTIFFWriter(fileio: ~ophyd_async.epics.adcore._core_io.NDFileIO, path_provider: ~ophyd_async.core.PathProvider, dataset_describer: ~ophyd_async.core.DatasetDescriber, plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None)
+`````{py:class} ADTIFFWriter(fileio: ~ophyd_async.epics.adcore._core_io.NDFilePluginIO, path_provider: ~ophyd_async.core.PathProvider, dataset_describer: ~ophyd_async.core.DatasetDescriber, plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None)
 :canonical: ophyd_async.epics.adcore._tiff_writer.ADTIFFWriter
 
-Bases: {py:obj}`ophyd_async.epics.adcore._core_writer.ADWriter`\[{py:obj}`ophyd_async.epics.adcore._core_io.NDFileIO`\]
+Bases: {py:obj}`ophyd_async.epics.adcore._core_writer.ADWriter`\[{py:obj}`ophyd_async.epics.adcore._core_io.NDFilePluginIO`\]
 
 ```{autodoc2-docstring} ophyd_async.epics.adcore._tiff_writer.ADTIFFWriter
 ```
@@ -1417,10 +1402,10 @@ Bases: {py:obj}`ophyd_async.epics.adcore._core_writer.ADWriter`\[{py:obj}`ophyd_
 
 `````
 
-`````{py:class} ADJPEGWriter(fileio: ~ophyd_async.epics.adcore._core_io.NDFileIO, path_provider: ~ophyd_async.core.PathProvider, dataset_describer: ~ophyd_async.core.DatasetDescriber, plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None)
+`````{py:class} ADJPEGWriter(fileio: ~ophyd_async.epics.adcore._core_io.NDFilePluginIO, path_provider: ~ophyd_async.core.PathProvider, dataset_describer: ~ophyd_async.core.DatasetDescriber, plugins: dict[str, ~ophyd_async.epics.adcore._core_io.NDPluginBaseIO] | None = None)
 :canonical: ophyd_async.epics.adcore._jpeg_writer.ADJPEGWriter
 
-Bases: {py:obj}`ophyd_async.epics.adcore._core_writer.ADWriter`\[{py:obj}`ophyd_async.epics.adcore._core_io.NDFileIO`\]
+Bases: {py:obj}`ophyd_async.epics.adcore._core_writer.ADWriter`\[{py:obj}`ophyd_async.epics.adcore._core_io.NDFilePluginIO`\]
 
 ```{autodoc2-docstring} ophyd_async.epics.adcore._jpeg_writer.ADJPEGWriter
 ```
@@ -1818,14 +1803,6 @@ Bases: {py:obj}`ophyd_async.core.StrictEnum`
 
 `````
 
-````{py:function} stop_busy_record(signal: ~ophyd_async.core.SignalRW[~ophyd_async.core.SignalDatatypeT], value: ~ophyd_async.core.SignalDatatypeT, timeout: float = DEFAULT_TIMEOUT, status_timeout: float | None = None) -> None
-:canonical: ophyd_async.epics.adcore._utils.stop_busy_record
-:async:
-
-```{autodoc2-docstring} ophyd_async.epics.adcore._utils.stop_busy_record
-```
-````
-
 `````{py:class} NDAttributePvDbrType()
 :canonical: ophyd_async.epics.adcore._utils.NDAttributePvDbrType
 
@@ -2021,3 +1998,10 @@ Bases: {py:obj}`ophyd_async.epics.adcore._core_io.NDPluginBaseIO`
 ````
 
 `````
+
+````{py:function} ndattributes_to_xml(ndattributes: ~collections.abc.Sequence[~ophyd_async.epics.adcore._utils.NDAttributeParam | ~ophyd_async.epics.adcore._utils.NDAttributePv]) -> str
+:canonical: ophyd_async.epics.adcore._utils.ndattributes_to_xml
+
+```{autodoc2-docstring} ophyd_async.epics.adcore._utils.ndattributes_to_xml
+```
+````
